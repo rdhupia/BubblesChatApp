@@ -34,7 +34,7 @@ extension LoginController:UIImagePickerControllerDelegate, UINavigationControlle
             // Save Successfully authenticated user
             
             // Firabase requires name for image to store
-            let imageName = NSUUID().UUIDString
+            let imageName = NSUUID().UUIDString     // Unique string
             let storageRef = FIRStorage.storage().referenceForURL("gs://bubbleschat-c19a3.appspot.com").child("profile_images").child("\(imageName).png")
             if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {
                 
@@ -110,7 +110,6 @@ extension LoginController:UIImagePickerControllerDelegate, UINavigationControlle
     
     // Handle cancel
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        print(123)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
