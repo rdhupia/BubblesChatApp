@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3196F4DE5E8ABBED4EDF4806 /* Pods_BubblesChatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6B58716F88A72CC13AF5EA /* Pods_BubblesChatAppTests.framework */; };
+		39B644371D7E91EA0040356A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B644361D7E91EA0040356A /* User.swift */; };
+		39DF83BD1D7FB5860039F2FD /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF83BC1D7FB5860039F2FD /* LoginController+handlers.swift */; };
+		39E5494E1D72468600A34801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5494D1D72468600A34801 /* AppDelegate.swift */; };
+		39E549501D72468600A34801 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5494F1D72468600A34801 /* MessageController.swift */; };
+		39E549531D72468700A34801 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E549511D72468700A34801 /* Main.storyboard */; };
+		39E549551D72468700A34801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E549541D72468700A34801 /* Assets.xcassets */; };
+		39E549581D72468700A34801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E549561D72468700A34801 /* LaunchScreen.storyboard */; };
+		39E549631D72468700A34801 /* BubblesChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E549621D72468700A34801 /* BubblesChatAppTests.swift */; };
+		39E549701D724AF600A34801 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5496F1D724AF600A34801 /* LoginController.swift */; };
+		39E549721D7377CD00A34801 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39E549711D7377CD00A34801 /* GoogleService-Info.plist */; };
+		39FE1D401D7D2A4900733A99 /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE1D3F1D7D2A4900733A99 /* NewMessageController.swift */; };
+		E0CEBFBB64D7268E67B1B9DA /* Pods_BubblesChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE0BF0786123CEA2B03566E /* Pods_BubblesChatApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		39E5495F1D72468700A34801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39E549421D72468600A34801 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39E549491D72468600A34801;
+			remoteInfo = BubblesChatApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3519310CDE4B4C42D6D33F0B /* Pods-BubblesChatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubblesChatAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BubblesChatAppTests/Pods-BubblesChatAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		39B644361D7E91EA0040356A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		39DF83BC1D7FB5860039F2FD /* LoginController+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginController+handlers.swift"; sourceTree = "<group>"; };
+		39E5494A1D72468600A34801 /* BubblesChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubblesChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E5494D1D72468600A34801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		39E5494F1D72468600A34801 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		39E549521D72468700A34801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39E549541D72468700A34801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39E549571D72468700A34801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		39E549591D72468700A34801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E5495E1D72468700A34801 /* BubblesChatAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubblesChatAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E549621D72468700A34801 /* BubblesChatAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesChatAppTests.swift; sourceTree = "<group>"; };
+		39E549641D72468700A34801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E5496F1D724AF600A34801 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		39E549711D7377CD00A34801 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39FE1D3F1D7D2A4900733A99 /* NewMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		3BE0BF0786123CEA2B03566E /* Pods_BubblesChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BubblesChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98883F05050C25AB55CB3C00 /* Pods-BubblesChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubblesChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BubblesChatApp/Pods-BubblesChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AC6B58716F88A72CC13AF5EA /* Pods_BubblesChatAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BubblesChatAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62BCF071BB990CA567C0F3F /* Pods-BubblesChatAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubblesChatAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BubblesChatAppTests/Pods-BubblesChatAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7A8A61019E67C591D620BA6 /* Pods-BubblesChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubblesChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BubblesChatApp/Pods-BubblesChatApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39E549471D72468600A34801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0CEBFBB64D7268E67B1B9DA /* Pods_BubblesChatApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39E5495B1D72468700A34801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3196F4DE5E8ABBED4EDF4806 /* Pods_BubblesChatAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39B644351D7E91980040356A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39B644361D7E91EA0040356A /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		39E549411D72468600A34801 = {
+			isa = PBXGroup;
+			children = (
+				39E5494C1D72468600A34801 /* BubblesChatApp */,
+				39E549611D72468700A34801 /* BubblesChatAppTests */,
+				39E5494B1D72468600A34801 /* Products */,
+				B3933C9934CC85F6CEA3B237 /* Pods */,
+				7D89CF41A2F06B88AB4BFB22 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		39E5494B1D72468600A34801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39E5494A1D72468600A34801 /* BubblesChatApp.app */,
+				39E5495E1D72468700A34801 /* BubblesChatAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39E5494C1D72468600A34801 /* BubblesChatApp */ = {
+			isa = PBXGroup;
+			children = (
+				39B644351D7E91980040356A /* Model */,
+				39E5496E1D724ABE00A34801 /* Controller */,
+				39E5494D1D72468600A34801 /* AppDelegate.swift */,
+				39E549511D72468700A34801 /* Main.storyboard */,
+				39E549541D72468700A34801 /* Assets.xcassets */,
+				39E549561D72468700A34801 /* LaunchScreen.storyboard */,
+				39E549591D72468700A34801 /* Info.plist */,
+				39E549711D7377CD00A34801 /* GoogleService-Info.plist */,
+			);
+			path = BubblesChatApp;
+			sourceTree = "<group>";
+		};
+		39E549611D72468700A34801 /* BubblesChatAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				39E549621D72468700A34801 /* BubblesChatAppTests.swift */,
+				39E549641D72468700A34801 /* Info.plist */,
+			);
+			path = BubblesChatAppTests;
+			sourceTree = "<group>";
+		};
+		39E5496E1D724ABE00A34801 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39E5496F1D724AF600A34801 /* LoginController.swift */,
+				39E5494F1D72468600A34801 /* MessageController.swift */,
+				39FE1D3F1D7D2A4900733A99 /* NewMessageController.swift */,
+				39DF83BC1D7FB5860039F2FD /* LoginController+handlers.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7D89CF41A2F06B88AB4BFB22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BE0BF0786123CEA2B03566E /* Pods_BubblesChatApp.framework */,
+				AC6B58716F88A72CC13AF5EA /* Pods_BubblesChatAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3933C9934CC85F6CEA3B237 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98883F05050C25AB55CB3C00 /* Pods-BubblesChatApp.debug.xcconfig */,
+				E7A8A61019E67C591D620BA6 /* Pods-BubblesChatApp.release.xcconfig */,
+				B62BCF071BB990CA567C0F3F /* Pods-BubblesChatAppTests.debug.xcconfig */,
+				3519310CDE4B4C42D6D33F0B /* Pods-BubblesChatAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39E549491D72468600A34801 /* BubblesChatApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39E549671D72468700A34801 /* Build configuration list for PBXNativeTarget "BubblesChatApp" */;
+			buildPhases = (
+				9C90BA207AC4819098B8AA39 /* [CP] Check Pods Manifest.lock */,
+				39E549461D72468600A34801 /* Sources */,
+				39E549471D72468600A34801 /* Frameworks */,
+				39E549481D72468600A34801 /* Resources */,
+				3F3ADF5408BACAEE24A833C1 /* [CP] Embed Pods Frameworks */,
+				8D8A6FCD04C30ED1370A76CC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BubblesChatApp;
+			productName = BubblesChatApp;
+			productReference = 39E5494A1D72468600A34801 /* BubblesChatApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		39E5495D1D72468700A34801 /* BubblesChatAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39E5496A1D72468700A34801 /* Build configuration list for PBXNativeTarget "BubblesChatAppTests" */;
+			buildPhases = (
+				517C80330C969930EB83D266 /* [CP] Check Pods Manifest.lock */,
+				39E5495A1D72468700A34801 /* Sources */,
+				39E5495B1D72468700A34801 /* Frameworks */,
+				39E5495C1D72468700A34801 /* Resources */,
+				663825A2FDC26BBD3C572571 /* [CP] Embed Pods Frameworks */,
+				A3A8DF9DC22A8604C1EC5278 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39E549601D72468700A34801 /* PBXTargetDependency */,
+			);
+			name = BubblesChatAppTests;
+			productName = BubblesChatAppTests;
+			productReference = 39E5495E1D72468700A34801 /* BubblesChatAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39E549421D72468600A34801 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ravideep Dhupia";
+				TargetAttributes = {
+					39E549491D72468600A34801 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					39E5495D1D72468700A34801 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 39E549491D72468600A34801;
+					};
+				};
+			};
+			buildConfigurationList = 39E549451D72468600A34801 /* Build configuration list for PBXProject "BubblesChatApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39E549411D72468600A34801;
+			productRefGroup = 39E5494B1D72468600A34801 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39E549491D72468600A34801 /* BubblesChatApp */,
+				39E5495D1D72468700A34801 /* BubblesChatAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39E549481D72468600A34801 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E549581D72468700A34801 /* LaunchScreen.storyboard in Resources */,
+				39E549721D7377CD00A34801 /* GoogleService-Info.plist in Resources */,
+				39E549551D72468700A34801 /* Assets.xcassets in Resources */,
+				39E549531D72468700A34801 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39E5495C1D72468700A34801 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F3ADF5408BACAEE24A833C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubblesChatApp/Pods-BubblesChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		517C80330C969930EB83D266 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		663825A2FDC26BBD3C572571 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubblesChatAppTests/Pods-BubblesChatAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D8A6FCD04C30ED1370A76CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubblesChatApp/Pods-BubblesChatApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C90BA207AC4819098B8AA39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A8DF9DC22A8604C1EC5278 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubblesChatAppTests/Pods-BubblesChatAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39E549461D72468600A34801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39FE1D401D7D2A4900733A99 /* NewMessageController.swift in Sources */,
+				39E549501D72468600A34801 /* MessageController.swift in Sources */,
+				39DF83BD1D7FB5860039F2FD /* LoginController+handlers.swift in Sources */,
+				39E549701D724AF600A34801 /* LoginController.swift in Sources */,
+				39B644371D7E91EA0040356A /* User.swift in Sources */,
+				39E5494E1D72468600A34801 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39E5495A1D72468700A34801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E549631D72468700A34801 /* BubblesChatAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39E549601D72468700A34801 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39E549491D72468600A34801 /* BubblesChatApp */;
+			targetProxy = 39E5495F1D72468700A34801 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		39E549511D72468700A34801 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39E549521D72468700A34801 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		39E549561D72468700A34801 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39E549571D72468700A34801 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39E549651D72468700A34801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		39E549661D72468700A34801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39E549681D72468700A34801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98883F05050C25AB55CB3C00 /* Pods-BubblesChatApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BubblesChatApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdhupia.BubblesChatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		39E549691D72468700A34801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A8A61019E67C591D620BA6 /* Pods-BubblesChatApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BubblesChatApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdhupia.BubblesChatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		39E5496B1D72468700A34801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B62BCF071BB990CA567C0F3F /* Pods-BubblesChatAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BubblesChatAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdhupia.BubblesChatAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BubblesChatApp.app/BubblesChatApp";
+			};
+			name = Debug;
+		};
+		39E5496C1D72468700A34801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3519310CDE4B4C42D6D33F0B /* Pods-BubblesChatAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BubblesChatAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rdhupia.BubblesChatAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BubblesChatApp.app/BubblesChatApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39E549451D72468600A34801 /* Build configuration list for PBXProject "BubblesChatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39E549651D72468700A34801 /* Debug */,
+				39E549661D72468700A34801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39E549671D72468700A34801 /* Build configuration list for PBXNativeTarget "BubblesChatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39E549681D72468700A34801 /* Debug */,
+				39E549691D72468700A34801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39E5496A1D72468700A34801 /* Build configuration list for PBXNativeTarget "BubblesChatAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39E5496B1D72468700A34801 /* Debug */,
+				39E5496C1D72468700A34801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39E549421D72468600A34801 /* Project object */;
+}

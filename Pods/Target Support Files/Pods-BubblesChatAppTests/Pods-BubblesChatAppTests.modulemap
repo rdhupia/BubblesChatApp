@@ -1,0 +1,6 @@
+framework module Pods_BubblesChatAppTests {
+  umbrella header "Pods-BubblesChatAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
