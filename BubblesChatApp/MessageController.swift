@@ -124,7 +124,8 @@ class MessageController: UITableViewController {
     
     // Launch Controller
     func showChatController() {
-        let chatController = ChatController()
+        // let chatController = ChatController()      // Need arg for UICollectionViewController
+        let chatController = ChatController(collectionViewLayout: UICollectionViewFlowLayout())
         navigationController?.pushViewController(chatController, animated: true)
     }
     
