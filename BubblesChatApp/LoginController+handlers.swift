@@ -35,9 +35,14 @@ extension LoginController:UIImagePickerControllerDelegate, UINavigationControlle
             
             // Firabase requires name for image to store
             let imageName = NSUUID().UUIDString     // Unique string
-            let storageRef = FIRStorage.storage().referenceForURL("gs://bubbleschat-c19a3.appspot.com").child("profile_images").child("\(imageName).png")
-            if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {
-                
+            let storageRef = FIRStorage.storage().referenceForURL("gs://bubbleschat-c19a3.appspot.com").child("profile_images").child("\(imageName).jpg")
+            
+            // generate binary data from PNG representation of image (too heavy - using jpg instead)
+            // if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {
+            
+            // generate binary data from JPG representation, compress to 10%
+            if let profileImage = self.profileImageView.image, uploadData = UIImageJPEGRepresentation(profileImage, 0.1) {
+            
                 storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                     if error != nil {
                         print(error)
@@ -67,6 +72,10 @@ extension LoginController:UIImagePickerControllerDelegate, UINavigationControlle
                 print(err)
                 return
             }
+            
+            let user =  User()
+            user.setValuesForKeysWithDictionary(values)
+            self.messageController?.setNavBarWithUser(user)
             
             // Slide scene down if registration successful
             self.dismissViewControllerAnimated(true, completion: nil)

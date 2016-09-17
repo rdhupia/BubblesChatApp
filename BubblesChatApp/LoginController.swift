@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class LoginController: UIViewController {
+
+    var messageController: MessageController?
     
     // MARK: Subviews
     // Subview - rectangular container
@@ -66,6 +68,10 @@ class LoginController: UIViewController {
                 print(error)
                 return
             }
+            
+            // Login successful
+            self.messageController?.getUserAndSetNavBarTitle()
+            
             print("User successfully logged in")
             self.dismissViewControllerAnimated(true, completion: nil)
             

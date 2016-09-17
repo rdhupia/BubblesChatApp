@@ -24,11 +24,6 @@ class MessageController: UITableViewController {
         checkIfUserIsLoggedIn()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        print("Message Controller ViewDidAppear")
-        checkIfUserIsLoggedIn()
-    }
-    
     // New message icon is clicked - right bar button
     func handleNewMessage() {
         let newMessageController = NewMessageController()
@@ -48,16 +43,89 @@ class MessageController: UITableViewController {
             performSelector(#selector(handleLogout), withObject: nil, afterDelay: 0)
         } else  {
             // Fetch value, be referencing Firebase database
-            FIRDatabase.database().reference().child("users").child(uid!).observeEventType(.Value, withBlock: { (snapshot) in
-                
-                print(snapshot)
-                
-                if let dictionary = snapshot.value as? [String: AnyObject] {
-                    self.navigationItem.title = dictionary["name"] as? String
-                }
-                
-                }, withCancelBlock: nil)
+            getUserAndSetNavBarTitle()
         }
+    }
+    
+    // fetch user and set nav bar title
+    func getUserAndSetNavBarTitle() {
+        guard let uid = FIRAuth.auth()?.currentUser?.uid else {
+            return
+        }
+        
+        // Fetch value, be referencing Firebase database
+        FIRDatabase.database().reference().child("users").child(uid).observeEventType(.Value, withBlock: { (snapshot) in
+            
+            print(snapshot)
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                // self.navigationItem.title = dictionary["name"] as? String
+                
+                let user = User()
+                user.setValuesForKeysWithDictionary(dictionary)
+                self.setNavBarWithUser(user)
+            }
+            
+            }, withCancelBlock: nil)
+    }
+    
+    // Set up nav bar with username and profile pic
+    func setNavBarWithUser(user: User) {
+        
+        // Include three views in the title
+        let titleV = UIView()
+        titleV.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+        
+        let containerView = UIView()
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        titleV.addSubview(containerView)
+        
+        let profileImageView = UIImageView()
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Set aspect ratio
+        profileImageView.contentMode = .ScaleAspectFill
+        profileImageView.layer.cornerRadius = 20
+        profileImageView.clipsToBounds = true
+        
+        if let profileImageUrl = user.profileImageUrl {
+            profileImageView.loadImageUsingCache(profileImageUrl)
+        }
+        
+        containerView.addSubview(profileImageView)
+        
+        // iOS 9 contstaints: x, y, width, height
+        profileImageView.leftAnchor.constraintEqualToAnchor(containerView.leftAnchor).active = true
+        profileImageView.centerYAnchor.constraintEqualToAnchor(containerView.centerYAnchor).active = true
+        profileImageView.widthAnchor.constraintEqualToConstant(40).active = true
+        profileImageView.heightAnchor.constraintEqualToConstant(40).active = true
+        
+        let nameLabel = UILabel()
+        
+        containerView.addSubview(nameLabel)    // Always add before anchors, hierarchy issue
+        nameLabel.text = user.name
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Set constraints for lable: x, y, width, height
+        nameLabel.leftAnchor.constraintEqualToAnchor(profileImageView.rightAnchor, constant: 8).active = true
+        nameLabel.centerYAnchor.constraintEqualToAnchor(profileImageView.centerYAnchor).active = true
+        nameLabel.rightAnchor.constraintEqualToAnchor(containerView.rightAnchor).active = true
+        nameLabel.heightAnchor.constraintEqualToAnchor(profileImageView.heightAnchor).active = true
+        
+        // Center container view inside TitleV
+        containerView.centerXAnchor.constraintEqualToAnchor(titleV.centerXAnchor).active = true
+        containerView.centerYAnchor.constraintEqualToAnchor(titleV.centerYAnchor).active = true
+        
+        self.navigationItem.titleView = titleV
+        
+        // Gesture Recognizer
+        titleV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showChatController)))
+    }
+    
+    // Launch Controller
+    func showChatController() {
+        let chatController = ChatController()
+        navigationController?.pushViewController(chatController, animated: true)
     }
     
     // Launch LoginController when logout button is pressed
@@ -71,6 +139,7 @@ class MessageController: UITableViewController {
         }
         
         let loginController = LoginController()
+        loginController.messageController = self
         presentViewController(loginController, animated: true, completion: nil)
     }
 

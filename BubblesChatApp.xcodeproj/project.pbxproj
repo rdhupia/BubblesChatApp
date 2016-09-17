@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3196F4DE5E8ABBED4EDF4806 /* Pods_BubblesChatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6B58716F88A72CC13AF5EA /* Pods_BubblesChatAppTests.framework */; };
 		39B644371D7E91EA0040356A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B644361D7E91EA0040356A /* User.swift */; };
+		39C9584E1D8D057C00AAA2F8 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C9584D1D8D057C00AAA2F8 /* ChatController.swift */; };
 		39DF83BD1D7FB5860039F2FD /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DF83BC1D7FB5860039F2FD /* LoginController+handlers.swift */; };
 		39E5494E1D72468600A34801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5494D1D72468600A34801 /* AppDelegate.swift */; };
 		39E549501D72468600A34801 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5494F1D72468600A34801 /* MessageController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		3519310CDE4B4C42D6D33F0B /* Pods-BubblesChatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubblesChatAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BubblesChatAppTests/Pods-BubblesChatAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		39B644361D7E91EA0040356A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		39C9584D1D8D057C00AAA2F8 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		39DF83BC1D7FB5860039F2FD /* LoginController+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginController+handlers.swift"; sourceTree = "<group>"; };
 		39E5494A1D72468600A34801 /* BubblesChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubblesChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E5494D1D72468600A34801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				39E5494F1D72468600A34801 /* MessageController.swift */,
 				39FE1D3F1D7D2A4900733A99 /* NewMessageController.swift */,
 				39DF83BC1D7FB5860039F2FD /* LoginController+handlers.swift */,
+				39C9584D1D8D057C00AAA2F8 /* ChatController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			files = (
 				39FE1D401D7D2A4900733A99 /* NewMessageController.swift in Sources */,
 				39E549501D72468600A34801 /* MessageController.swift in Sources */,
+				39C9584E1D8D057C00AAA2F8 /* ChatController.swift in Sources */,
 				39DF83BD1D7FB5860039F2FD /* LoginController+handlers.swift in Sources */,
 				39E549701D724AF600A34801 /* LoginController.swift in Sources */,
 				39B644371D7E91EA0040356A /* User.swift in Sources */,
